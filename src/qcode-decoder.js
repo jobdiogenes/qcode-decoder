@@ -38,7 +38,7 @@ QCodeDecoder.prototype.isCanvasSupported = function () {
 QCodeDecoder.prototype.hasGetUserMedia = function () {
   navigator.getUserMedia = navigator.getUserMedia ||
                            navigator.webkitGetUserMedia ||
-                           navigator.mozGetUserMedia ||
+                           navigator.mediaDevices.GetUserMedia ||
                            navigator.msGetUserMedia;
 
   return !!(navigator.getUserMedia);
